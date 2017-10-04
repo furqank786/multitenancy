@@ -1,0 +1,14 @@
+{
+    "name": "dynabiccachet/multitenancy",
+    "description": "This package will enable multi tenancy in the dynabic cachet",
+    "type": "plugin",
+    "license": "public",
+    "authors": [
+        {
+            "name": "Furqan Khan",
+            "email": "furqank@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
