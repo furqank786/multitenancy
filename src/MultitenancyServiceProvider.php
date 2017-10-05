@@ -1,6 +1,6 @@
 <?php
 
-namespace DynabicCachet\Multitenancy;
+namespace Furqank786\Multitenancy;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +23,7 @@ class MultitenancyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('DynabicCachet\Multitenancy\Controllers\SiteController');
+        $this->app->make('Furqank786\Multitenancy\Controllers\SiteController');
         $this->loadViewsFrom(__DIR__.'/views', 'multitenancy');
     }
 }

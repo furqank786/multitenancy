@@ -1,6 +1,6 @@
 <?php
 
-namespace DynabicCachet\Multitenancy\Requests;
+namespace Furqank786\Multitenancy\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace DynabicCachet\Multitenancy\Models;
+namespace Furqank786\Multitenancy\Models;
 
 use \Illuminate\Database\Eloquent\Model as Eloquent;
 

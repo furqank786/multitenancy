@@ -6,11 +6,11 @@
  * Time: 12:28 AM
  */
 
-namespace DynabicCachet\Multitenancy\Controllers;
+namespace Furqank786\Multitenancy\Controllers;
 
 
-use DynabicCachet\Multitenancy\Models\Sites;
-use DynabicCachet\Multitenancy\Requests\SitesRequest;
+use Furqank786\Multitenancy\Models\Sites;
+use Furqank786\Multitenancy\Requests\SitesRequest;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Redirect;
 
