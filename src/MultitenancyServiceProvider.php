@@ -12,8 +12,21 @@ class MultitenancyServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    { dd($this->app->basePath());
         include __DIR__.'/routes.php';
+        $this->publishes([
+            __DIR__.'/views/site/' => base_path('resources/views/dashboard/sites'),
+        ]);
+//        $this->publishes([
+//            __DIR__.'/SiteRoutes.php' => base_path('Http/Routes/Dashboard/'),
+//        ]);
+        $this->publishes([
+            __DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
+        ], 'migrations');
+
+//        $this->publishes([
+//            __DIR__.'/Requests/' => base_path('app/Requests'),
+//        ]);
     }
 
     /**
@@ -24,6 +37,7 @@ class MultitenancyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->make('Furqank786\Multitenancy\Controllers\SiteController');
-        $this->loadViewsFrom(__DIR__.'/views', 'multitenancy');
+        //$this->loadViewsFrom(__DIR__.'/views', 'multitenancy');
+
     }
 }

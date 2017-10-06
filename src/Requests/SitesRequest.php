@@ -2,7 +2,7 @@
 
 namespace Furqank786\Multitenancy\Requests;
 
-use Devfk\Calculator\Requests\Request;
+use Furqank786\Multitenancy\Requests\Request;
 
 /**
  * Class AddMethodRequest

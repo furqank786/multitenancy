@@ -18,7 +18,9 @@ class SiteController extends Controller
 {
     public function addsite()
     {
-        return view('multitenancy::site.add')
+//        return view('multitenancy::site.add')
+//            ->withPageTitle('Add Multi Sites');
+        return view('dashboard.sites.add')
             ->withPageTitle('Add Multi Sites');
     }
 
@@ -77,7 +79,7 @@ class SiteController extends Controller
                 {
                     // Perform the query
 
-                    mysqli_query($conn, $templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysqli_error($conn) . '<br /><br />');
+                    mysqli_query($conn, $templine) or print('Error performing query \'<strong>' . $templine . '\': ' . 'e' . '<br /><br />');//mysqli_error($conn)
                     // Reset temp variable to empty
                     $templine = '';
                 }
@@ -85,7 +87,7 @@ class SiteController extends Controller
             echo "Tables imported successfully";
 
         }
-        return Redirect::to('dashboard/site/list')->withFlashSuccess('Site added successfully!');
+        return Redirect::to('dashboard/sites')->withSuccess('Site added successfully!');
     }
 
     public function listsite()
@@ -93,12 +95,12 @@ class SiteController extends Controller
         $site = new Sites();
         $sites = $site::all();
 
-        return view('multitenancy::site.list', compact('sites'));
+        return view('dashboard.sites.list', compact('sites'));
     }
 
     public function updateSite($id, $status) {
         Sites::where('id', $id)
             ->update(['status' => $status]);
-        return Redirect::to('dashboard/site/list')->withFlashSuccess('Site updated successfully!');
+        return Redirect::to('dashboard/sites')->withSuccess('Site updated successfully!');
     }
 }
