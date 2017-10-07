@@ -12,7 +12,7 @@ class MultitenancyServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    { dd($this->app->basePath());
+    { 
         include __DIR__.'/routes.php';
         $this->publishes([
             __DIR__.'/views/site/' => base_path('resources/views/dashboard/sites'),
